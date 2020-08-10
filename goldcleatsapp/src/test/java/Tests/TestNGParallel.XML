@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "PreLoginTestSuite" parallel="methods" thread-count="3">
+    <!-- <listeners>
+         <listener class-name="com.aventstack.extentreports.adapter.listener.ExtentITestListenerClassAdapter"></listener>
+     </listeners>-->
+    <listeners>
+        <listener class-name="com.qa.Utils.RetryListener"/>
+    </listeners>
+    <test name = "PublicViewTest">
+        <classes>
+            <class name = "com.qa.test.PublicViewTest" />
+        </classes>
+    </test>
+    <test name = "LoginScreenTest">
+        <classes>
+            <class name = "com.qa.test.LoginScreenTest" />
+        </classes>
+    </test>
+</suite>
